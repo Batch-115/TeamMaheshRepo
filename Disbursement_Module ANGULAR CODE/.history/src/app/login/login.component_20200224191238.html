@@ -1,0 +1,70 @@
+<div class="login-wrap">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked />
+    <label  for="tab-1" class="tab">Sign In</label >
+    <input id="tab-2" type="radio" name="tab" class="sign-up" />
+    <label
+  for="tab-2" class="tab">Sign Up</label >
+    <div class="login-form">
+      <div class="sign-in-htm">
+        <div class="group">
+          <label for="user" class="label" [(ngModel)]=username>Username</label>
+          <input id="user" type="text" class="input" />
+        </div>
+        <div class="group">
+          <label for="pass" class="label" [(ngModel)]=password>Password</label>
+          <input id="pass" type="password" class="input" data-type="password" />
+        </div>
+        <div class="group">
+          <input id="check" type="checkbox" class="check" checked />
+          <label for="check"  ><span class="icon"></span> Keep me Signed in</label  >
+        </div>
+        <div class="group">
+          <input type="submit" class="button" value="Sign In" (click)="login(u)" />
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <a href="#popup1">Forgot Password?</a>
+        </div>
+      </div>
+      <div class="sign-up-htm">
+        <div class="group">
+          <label for="user" class="label" [(ngModel)]=username>Username</label>
+          <input id="user" type="text" class="input" />
+        </div>
+        <div class="group">
+          <label for="pass" class="label" [(ngModel)]=password>Password</label>
+          <input id="pass" type="password" class="input" data-type="password" />
+        </div>
+        <div class="group">
+          <label for="pass" class="label" [(ngModel)]=repassword>Repeat Password</label>
+          <input id="pass" type="password" class="input" data-type="password" />
+        </div>
+        <div class="group">
+          <label for="pass" class="label" [(ngModel)]=email>Email Address</label>
+          <input id="pass" type="text" class="input" />
+        </div>
+        <div class="group">
+          <input type="submit" class="button" value="Sign Up" (click)="signup(u)"/>
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <label for="tab-1">Already Member?</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="popup1" class="overlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="group">
+      <label for="pass" class="label">Email Address</label>
+      <input id="pass" type="text" class="input" />
+    </div>
+    <div class="group">
+      <input type="submit" class="button" style="align-items: center;" value="Continue" />
+    </div>
+  </div>
+</div>

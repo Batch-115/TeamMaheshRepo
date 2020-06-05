@@ -1,0 +1,123 @@
+<div class="panel-header">
+  <div class="header text-center logo-mini">
+    <h2 class="title">Loan Transfer Process</h2>
+    <img src="./assets/img/EasyEMI_logo.PNG" class="rounded" alt="logo">
+    <p class="category">Branch:Karve Nagar</p>
+    <p class="category">Address: Mandal Chowk Road 
+      Near Karve Nagar Stop, Maharashtra-411052</p>
+  </div>
+</div>
+
+<!-- <div class="cart-item" *ngFor="let item of items">
+  <h4>Application ID: </h4><span>{{ item.id }} </span>
+  <h4>Applicant Name: </h4><span>{{ item.name }}</span>
+  <h4>Loan Sanction Amount: </h4><span>{{ item.loan_amt }}</span>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <div>
+    <label for="acc_no">
+      Loan Transfer Account :
+    </label>
+    <input id="acc_no" type="text" formControlName="acc_no">
+  </div>
+
+  <div>
+    <label for="ifsc">
+      IFSC Code :
+    </label>
+    <input id="ifsc" type="text" formControlName="ifsc">
+  </div>
+
+  <button class="button" type="submit">Transfer</button>
+
+</form>
+ -->
+
+
+ <div class="card m-3">
+  <h4 class="card-header">Loan Disbursement</h4>
+  <div class="card-body">
+     
+          
+        <div class="form-group col-4">
+          <label>Date</label>
+          <!-- <input type="text" [(ngModel)]="date" class="form-control"/> -->
+          <h5>{{date| date:'d/M/y'}}</h5>
+        </div>
+              <div class="form-group col-4">
+                  <label>Application ID</label>
+                  <input type="text" [(ngModel)]="id" class="form-control"/>
+                  <!-- <select formControlName="id" class="form-control">
+                      <option value=""></option>
+                      <option value="Mr">Mr</option>
+                      <option value="Mrs">Mrs</option>
+                      <option value="Miss">Miss</option>
+                      <option value="Ms">Ms</option>
+                  </select> -->
+                  <!-- <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                      <div *ngIf="f.title.errors.required">Title is required</div>
+                  </div> -->
+              </div>
+
+              <div class="form-group col-6">
+                  <label>Applicant Name</label>
+                  <input type="text" [(ngModel)]="name" class="form-control" />
+                  <!-- <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                      <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                  </div> -->
+              </div>
+              <!-- <div class="form-group col-5">
+                  <label>Last Name</label>
+                  <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                  <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                      <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                  </div>
+              </div> -->
+        
+          <div class="form-group col-6">
+              <label>Sanction Loan Amount</label>
+              <input type="text" [(ngModel)]="loan_amt" class="form-control" />
+              <!-- <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Email is required</div>
+                  <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div> -->
+          </div>
+          <div class="form-row">
+              <div class="form-group col-6">
+                  <label>Trancsaction Account Number</label>
+                  <input type="text" [(ngModel)]="acc_no" class="form-control" />
+                  <!-- <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required">Password is required</div>
+                      <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                  </div> -->
+              </div>
+              <div class="form-group col-4">
+                  <label>IFSC Code</label>
+                  <input type="text" [(ngModel)]="ifsc" class="form-control" />
+                  <!-- <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                      <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                      <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                  </div> -->
+              </div>
+          </div>
+          <!-- <div class="form-group form-check">
+              <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+              <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+              <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+          </div> -->
+          <div class="text-center">
+              <button class="btn btn-primary mr-1" (click)="success()">Transfer</button>
+              <!-- <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button> -->
+          </div>
+
+          
+            <div *ngIf="submitted">
+                <h5>Loan Transaction Successful...</h5>
+                <label>Transaction ID</label>
+                <h5>{{transc_id}}</h5>
+            </div>
+   
+  </div>
+</div>

@@ -1,0 +1,32 @@
+{
+    "LoanTransfer" :
+    [
+        {
+            "id": 1,
+            "date": "20/03/2020",
+            "name": "AAA",
+            "loan_amt": 11000,
+            "acc_no": "123456",
+            "ifsc": "AA1056",
+            "transc_id": "EE101123"
+        },
+        {
+            "id": 2,
+            "date": "2/02/2020",
+            "name": "BBB",
+            "loan_amt": 7250,
+            "acc_no": "987654",
+            "ifsc": "BB2026",
+            "transc_id": "EE989562"
+        },
+        {
+            "id": 3,
+            "date": "11/11/2020",
+            "name": "CCC",
+            "loan_amt": 25600,
+            "acc_no": "197346",
+            "ifsc": "CC9563",
+            "transc_id": "EE646235" 
+        }
+    ]
+}

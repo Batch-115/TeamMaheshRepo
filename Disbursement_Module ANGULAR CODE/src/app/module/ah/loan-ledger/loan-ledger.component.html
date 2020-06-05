@@ -1,0 +1,41 @@
+<div class="panel-header">
+  <div class="header text-center logo-mini">
+    <h2 class="title">Loan Ledger Generation</h2>
+    <img src="./assets/img/EasyEMI_logo.PNG" class="rounded" alt="logo">
+    <p class="category">Branch:Karve Nagar</p>
+    <p class="category">Address: Mandal Chowk Road 
+      Near Karve Nagar Stop, Maharashtra-411052</p>
+  </div>
+</div>
+
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-category">Applications ID: {{message}}</h4>
+      <!-- <h4 class="card-title"> Applicant Name: {{name}}</h4>
+      <h4>Principal Loan Amount: {{principal_amt}}</h4> -->
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="text-dark thead-dark">
+              <th *ngFor="let col of column" class="text-center">
+                {{col}}
+              </th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ld of ledger">
+              <td *ngFor="let col of index" class="text-center">
+                {{ld[col]}}
+              </td>
+            </tr>
+          </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-2">
+  <button class="btn btn-primary btn-block" (click)="success()">Download</button>
+</div>

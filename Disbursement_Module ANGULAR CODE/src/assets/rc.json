@@ -1,0 +1,38 @@
+{
+    "LoanReceipt" :
+    [
+        {
+            "id": 1,
+            "recpt_no":5,
+            "date": "6/03/2020",
+            "name": "AAA",
+            "address": "AaAaAa",
+            "loan_amt": 5000,
+            "emi_amt": 5,
+            "total_emi": 12,
+            "emi_start_date": "6/02/2021"
+        },
+        {
+            "id": 2,
+            "recpt_no":12,
+            "date": "25/09/2020",
+            "name": "BBB",
+            "address": "BbBbBb",
+            "loan_amt": 37500,
+            "emi_amt": 12,
+            "total_emi": 120,
+            "emi_start_date": "25/08/2030"
+        },
+        {
+            "id": 3,
+            "recpt_no":9,
+            "date": "31/05/2020",
+            "name": "CCC",
+            "address": "CcCcCc",
+            "loan_amt": 14500,
+            "emi_amt": 9,
+            "total_emi": 72,
+            "emi_start_date": "31/04/2026"
+        }
+    ]
+}

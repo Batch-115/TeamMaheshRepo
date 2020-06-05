@@ -1,0 +1,165 @@
+<div class="panel-header">
+  <div class="header text-center logo-mini">
+    <h2 class= "title">MIS Report</h2>
+    <img src="./assets/img/EasyEMI_logo.PNG" class="rounded" alt="logo">
+    <p class="category">Branch : Karve Nagar</p>
+    <p class="category">Address: Mandal Chowk Road 
+      Near Karve Nagar Stop, Maharashtra-411052</p>    
+  </div>
+</div>
+
+
+  <div class="col-lg-12 border p-5">
+    <div style="display: block; height:270px;width:500px;text-align:right">
+      <canvas baseChart
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)" >
+      </canvas>
+    </div>
+  </div>
+
+
+<div class="table-responsive p-5">
+  <div class="p-3">
+    <input type="text" placeholder="Search Here" [(ngModel)]="searchText"/>
+</div>
+  <table class="table">
+    <thead class="text-dark thead-dark">
+        <th *ngFor="let col of column" class="text-center">
+          {{col}}
+        </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ld of ledger |filter:searchText| paginate:{itemsPerPage:3,currentPage:p};">
+        <td *ngFor="let col of index" class="text-center">
+          {{ld[col]}}
+        </td>
+        <td>
+            <button class="btn btn-default mr-1" (click)="openModalWithClass(template); selected_id(ld)">View</button>
+        </td>
+      </tr>
+    </tbody>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </table>
+</div>
+
+
+<ng-template #template>  
+  <div class="modal-header">  
+    <h4 class="modal-title pull-left">Applicant Details</h4>  
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">  
+      <span aria-hidden="true">×</span>  
+    </button>  
+  </div>  
+  <div class="modal-body">  
+     <!-- START -->
+
+     <div class="card-body">
+      <form >
+        <div class="form-row">
+          <div class="form-group col-4">
+            <label>Date</label>
+            <!-- <input type="text" formControlName="date" class="form-control"/> -->
+            <h5>{{date| date:'d/M/y'}}</h5>
+          </div>
+          <div class="form-group col-4">
+            <label>Application ID</label>
+            <!-- <input type="text" formControlName="id" class="form-control"/> -->
+            <h5>{{id}}</h5>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label>Applicant Name</label>
+            <!-- <input type="text" formControlName="name" class="form-control"/> -->
+            <h5>{{name}}</h5>
+          </div>
+          <div class="form-group col-6">
+            <label>Applicant Mobile Number</label>
+            <!-- <input type="text" formControlName="contact" class="form-control"/> -->
+            <h5>{{contact}}</h5>
+          </div>
+        </div>
+        <div class="form-group col-12">
+          <label>Applicant Address</label>
+          <!-- <input type="text" formControlName="addr" class="form-control"/> -->
+          <h5>{{addr}}</h5>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label>Equipment</label>
+            <!-- <input type="text" formControlName="equip_name" class="form-control"/> -->
+            <h5>{{equip_name}}</h5>
+          </div>
+          <div class="form-group col-6">
+            <label>Equipment Price</label>
+            <!-- <input type="text" formControlName="equip_price" class="form-control"/> -->
+            <h5>{{equip_price}}</h5>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label>Loan Principal Amount</label>
+            <!-- <input type="text" formControlName="principal_amt" class="form-control"/> -->
+            <h5>{{principal_amt}}</h5>
+          </div>
+          <div class="form-group col-6">
+            <label>O/s Principal Amount</label>
+            <!-- <input type="text" formControlName="Os_principal_amt" class="form-control"/> -->
+            <h5>{{Os_principal_amt}}</h5>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label>Loan Interest Rate</label>
+            <!-- <input type="text" formControlName="loan_roi" class="form-control"/> -->
+            <h5>{{loan_roi}}</h5>
+          </div>
+          <div class="form-group col-6">
+            <label>EMI Amount</label>
+            <!-- <input type="text" formControlName="emi_amt" class="form-control"/> -->
+            <h5>{{emi_amt}}</h5>
+          </div>
+        </div>
+        <div class="form-group col-12">
+          <label>EMI Paid</label>
+          <!-- <input type="text" formControlName="emi_no_paid" class="form-control"/> -->
+          <h5>{{emi_no_paid}} / {{emi_no_total}}</h5>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label>EMI Start Date</label>
+            <!-- <input type="text" formControlName="emi_start_date" class="form-control"/> -->
+            <h5>{{emi_start_date}}</h5>
+          </div>
+          <div class="form-group col-6">
+            <label>EMI End Date</label>
+            <!-- <input type="text" formControlName="emi_end_date" class="form-control"/> -->
+            <h5>{{emi_end_date}}</h5>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label>Application Status</label>
+            <!-- <input type="text" formControlName="application_status" class="form-control"/> -->
+            <h5>{{application_status}}</h5>
+          </div>
+          <div class="form-group col-6">
+            <label>Action Taken</label>
+            <!-- <input type="text" formControlName="action_taken" class="form-control"/> -->
+            <h5>{{action_taken}}</h5>
+          </div>
+        </div>
+      </form>
+  </div>
+    <!-- END -->
+  </div>  
+  <div class="modal-footer">    
+    <button  class="btn btn-primary mr-1"  (click)="success()">Download</button>
+    <button class="btn btn-danger mr-1" (click)="modalRef.hide()">Close</button>
+  </div>  
+</ng-template>  
+

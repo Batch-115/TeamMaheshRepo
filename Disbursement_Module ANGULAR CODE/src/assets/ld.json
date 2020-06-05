@@ -1,0 +1,32 @@
+{
+    "Ledger" :
+    [
+        {
+            "id" : 1,
+            "emi_no": 5,
+            "due_date": "12/05/2020",
+            "emi_amt": 1250,
+            "principal_amt": 15600,
+            "interest_amt": 925,
+            "Os_principal_amt": 7000
+        },
+        {
+            "id" : 2,
+            "emi_no": 10,
+            "due_date": "1/07/2020",
+            "emi_amt": 5600,
+            "principal_amt": 75000,
+            "interest_amt": 2560,
+            "Os_principal_amt": 65500
+        },
+        {
+            "id" : 3,
+            "emi_no": 1,
+            "due_date": "7/01/2020",
+            "emi_amt": 9650,
+            "principal_amt": 250500,
+            "interest_amt": 4800,
+            "Os_principal_amt": 245000
+        }
+    ]
+}

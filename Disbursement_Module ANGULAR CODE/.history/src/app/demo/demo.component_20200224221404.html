@@ -1,0 +1,31 @@
+<p>
+  demo works!
+</p>
+<h1>Edit Product</h1>
+
+<form [formGroup]="user">
+
+  <label>
+    Title: <input formControlName="name" />
+  </label>
+  <h2>Selling Points</h2>
+  
+  <div formArrayName="address">
+    <div *ngFor="let item of address.controls; let pointIndex=index" [formGroupName]="pointIndex">
+    <label>
+      area: <input formControlName="area" />
+    </label>
+    <label>
+      city: <input formControlName="city" />
+    </label>
+    <label>
+      state: <input formControlName="state" />
+    </label>
+    <button type="button" (click)="deleteAddress(pointIndex)">Delete Selling Point</button>
+    </div>
+    <button type="button" (click)="addAddress()">Add Selling Point</button>
+  </div>
+
+</form>
+
+{{ this.user.value | json }}

@@ -1,0 +1,21 @@
+<p>
+  demo works!
+</p>
+<h1>Edit Product</h1>
+
+<form [formGroup]="user">
+
+  <label>
+    Title: <input formControlName="name" />
+  </label>
+  <h2>Selling Points</h2>
+
+  <label>
+    Selling Point: <input formControlName="area" />
+    
+    <input formControlName="city" />
+    <input formControlName="state" />
+  </label>
+</form>
+
+{{ this.user.value | json }}

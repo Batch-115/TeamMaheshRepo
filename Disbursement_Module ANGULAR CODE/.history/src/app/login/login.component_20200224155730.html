@@ -1,0 +1,88 @@
+<p>
+  login works!
+</p>
+<section class="authentication d-flex justify-content-center">
+  <div class="bg-white">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab" aria-controls="home" aria-selected="true">
+      Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">login</a>
+      </li>
+
+    </ul>
+    <div class="tab-content px-4 py-5" id="myTabContent">
+      <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="home-tab">
+<!--         <form> -->
+          <div>
+          <div class="input-box">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username">
+          </div>
+
+        <!--  <div class="input-box">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Email">
+          </div>-->
+
+          <div class="input-box">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Password">
+          </div>
+
+          <div class="authentication-info d-flex justify-content-between">
+
+            <div class="remember d-flex">
+              <div class="custom-checkbox">
+                <input id="reg-check" type="checkbox">
+                <span class="tick"></span>
+
+              </div>
+              <label for="reg-check">Remember Me</label>
+            </div>
+
+          </div>
+
+          <input type="submit" value="Register" class="btn btn btn-outline-secondary btn-block mt-3">
+
+        </div>
+<!--         </form> -->
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div>
+          <div class="input-box">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username">
+          </div>
+
+          <div class="input-box">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Password">
+          </div>
+
+          <div class="authentication-info d-flex justify-content-between ">
+
+             <div class="remember d-flex justify-content-center align-items-center">
+              <!--<div class="custom-checkbox">
+                <input id="check" type="checkbox">
+                <span class="tick"></span>
+              </div>
+              <label for="check">Remember Me</label>
+            </div>-->
+
+          <!--  <div class="forget">
+              <span>Forgot Password? </span>
+            </div>-->
+
+          </div>
+
+          <input type="submit" value="Login" class="btn btn btn-outline-secondary btn-block mt-3">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
